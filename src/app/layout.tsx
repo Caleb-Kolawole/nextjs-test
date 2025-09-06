@@ -6,14 +6,18 @@ import Link from "next/link";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Next.js Test Landing Page",
-  description: "A simple landing page built with Next.js, TypeScript, and Tailwind CSS.",
+  description:
+    "A simple, responsive landing page built with Next.js, TypeScript, and Tailwind CSS. Includes API integration, accessibility, and SEO best practices.",
   openGraph: {
     title: "Next.js Test Landing Page",
-    description: "Responsive landing page with API integration and SEO.",
+    description:
+      "Responsive landing page with API integration and SEO best practices.",
     url: "https://caleb-nextjs-test.netlify.app",
     siteName: "Next.js Test",
     images: [
@@ -26,6 +30,17 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Test Landing Page",
+    description:
+      "Responsive landing page with API integration and SEO best practices.",
+    images: ["/og-image.png"],
+    creator: "@TechSavvyCaleb",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 

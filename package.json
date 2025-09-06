@@ -9,6 +9,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
+    "audit:lighthouse": "lhci autorun --config=./lighthouserc.js",
     "audit:axe": "npx @axe-core/cli http://localhost:3000 --save --json=axe-report.json || true"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
