@@ -3,25 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev --turbo",
+    "build": "next build --turbo",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "audit:axe": "npx @axe-core/cli http://localhost:3000 --save --json=axe-report.json || true"
   },
   "dependencies": {
+    "axios": "^1.7.7",
+    "clsx": "^2.1.1",
     "next": "15.5.2",
+    "next-seo": "^6.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "postcss": "^8.5.6",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
